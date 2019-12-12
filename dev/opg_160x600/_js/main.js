@@ -1,3 +1,5 @@
+import {masking} from '../../_common/js/common.js'
+
 TweenLite.from(".hero", 15, {x:-150, y:0})
 
 const list_t2 = [
@@ -24,15 +26,6 @@ list_t3.map(item=>{
 	TweenLite.set(item.id, {clip: `rect(${item.y}px, 320px, 1200px, 0px)`})
 })
 
-function masking(list){	
-	const tl = new TimelineMax()
-	list.map(item=>{
-		const {id, y} = item	
-		tl.from(id, .5, {clip: `rect(${y+100}px, 320px, 1200px, 0px)`, opacity:0, ease:Power2.easeOut}, '-=.3')
-	})
-
-	return tl
-}
 
 
 
@@ -43,9 +36,6 @@ const start = ()=>{
 	tl.set('.masker', {opacity:0})
 	
 	tl.to('.t1', .3, {opacity:0}, "+=1")
-	
-
-	
 
 	tl.add(masking(list_t2))
 
