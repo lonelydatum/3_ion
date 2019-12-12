@@ -1,4 +1,4 @@
-// TweenLite.from(".hero", 15, {x:0, y:0})
+TweenLite.from(".hero", 15, {x:-150, y:0})
 
 const list_t2 = [
 	{id:'.t2a', y:120},
