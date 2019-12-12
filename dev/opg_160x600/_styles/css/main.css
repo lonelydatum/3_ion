@@ -274,9 +274,9 @@ sup {
 }
 
 .hero {
-  -webkit-transform: translate(-171px, -153px) scale(1.1, 1.1);
-  -ms-transform: translate(-171px, -153px) scale(1.1, 1.1);
-  transform: translate(-171px, -153px) scale(1.1, 1.1);
+  -webkit-transform: translate(-271px, 0px) scale(1, 1);
+  -ms-transform: translate(-271px, 0px) scale(1, 1);
+  transform: translate(-271px, 0px) scale(1, 1);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;

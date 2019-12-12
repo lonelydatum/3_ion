@@ -60,7 +60,8 @@
 }
 
 .hero{
-	@include pos-scale(-171, -153, 1.1);
+	@include pos-scale(-271, 0, 1);
+	// @include pos-scale(0, 0, 1);
 
 	// @include pos-scale(0, 0, .5);
 	// opacity: .5;

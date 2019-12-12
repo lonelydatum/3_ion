@@ -1,10 +1,12 @@
+// TweenLite.from(".hero", 15, {x:0, y:0})
+
 const start = ()=>{
 
 	
 	const MASK_TIME = .6
 	const mask = {clip: `rect(100px, 600px, 500px, 0px)`, opacity:1, ease:Power1.easeOut}
 
-	TweenLite.to(".hero", 15, {scale:.5, x:0, y:0})
+	
 
 
 
