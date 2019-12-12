@@ -1,27 +1,42 @@
 // TweenLite.from(".hero", 15, {x:0, y:0})
 
+const list_t2 = [
+	{id:'.t2a', y:120},
+	{id:'.t2b', y:210},
+	{id:'.t2c', y:280},
+	{id:'.t2d', y:350},
+]
+
+list_t2.map(item=>{
+	TweenLite.set(item.id, {clip: `rect(${item.y}px, 320px, 1200px, 0px)`})
+})
+
+function masking(list){	
+	const tl = new TimelineMax()
+	list.map(item=>{
+		const {id, y} = item	
+		tl.from(id, .5, {clip: `rect(${y+100}px, 320px, 1200px, 0px)`, opacity:0, ease:Power2.easeOut}, '-=.3')
+	})
+
+	return tl
+}
+
+
+
 const start = ()=>{
-
-	
-	const MASK_TIME = .6
-	const mask = {clip: `rect(100px, 600px, 500px, 0px)`, opacity:1, ease:Power1.easeOut}
-
-	
-
-
 
 	const tl = new TimelineMax()
 	tl.set('.frame1', {opacity:1})
 	tl.set('.masker', {opacity:0})
 	
 	tl.to('.t1', .3, {opacity:0}, "+=1.7")
-	tl.to('.t2a', MASK_TIME, {...mask}, "+=.2" )
-	tl.to('.t2b', MASK_TIME, {...mask}, '-=.2')
+	
+
+	
+
+	tl.add(masking(list_t2))
 
 	tl.to('.t2', .3, {opacity:0}, "+=1.5")
-
-	tl.to('.t3a', MASK_TIME, {...mask}, "+=.2" )
-	tl.to('.t3b', MASK_TIME, {...mask}, '-=.2')
 
 
 	// tl.add('t3Shift', "+=1")
@@ -43,31 +58,14 @@ const start = ()=>{
 	// tl.gotoAndPlay("green")
 }
 
-function masking(list){	
-	const tl = new TimelineMax()
-	list.map(item=>{
-		const {id, y} = item	
-		tl.from(id, .5, {clip: `rect(${y+100}px, 320px, 1200px, 0px)`, opacity:1, ease:Power2.easeOut})
-	})
-	
-	
 
-}
 
-const list_t2 = [
-	{id:'.t2a', y:120},
-	{id:'.t2b', y:210},
-	{id:'.t2c', y:280},
-	{id:'.t2d', y:350},
-]
 
-list_t2.map(item=>{
-	TweenLite.set(item.id, {clip: `rect(${item.y}px, 320px, 1200px, 0px)`})
-})
 
-masking(list_t2)
 
-// start()
+
+
+start()
 
 
 

@@ -3,25 +3,35 @@
 
 'use strict';
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+var list_t2 = [{ id: '.t2a', y: 120 }, { id: '.t2b', y: 210 }, { id: '.t2c', y: 280 }, { id: '.t2d', y: 350 }];
+
+list_t2.map(function (item) {
+	TweenLite.set(item.id, { clip: 'rect(' + item.y + 'px, 320px, 1200px, 0px)' });
+});
+
+function masking(list) {
+	var tl = new TimelineMax();
+	list.map(function (item) {
+		var id = item.id;
+		var y = item.y;
+
+		tl.from(id, .5, { clip: 'rect(' + (y + 100) + 'px, 320px, 1200px, 0px)', opacity: 0, ease: Power2.easeOut }, '-=.3');
+	});
+
+	return tl;
+}
 
 var start = function start() {
-
-	var MASK_TIME = .6;
-	var mask = { clip: 'rect(100px, 600px, 500px, 0px)', opacity: 1, ease: Power1.easeOut };
 
 	var tl = new TimelineMax();
 	tl.set('.frame1', { opacity: 1 });
 	tl.set('.masker', { opacity: 0 });
 
 	tl.to('.t1', .3, { opacity: 0 }, "+=1.7");
-	tl.to('.t2a', MASK_TIME, _extends({}, mask), "+=.2");
-	tl.to('.t2b', MASK_TIME, _extends({}, mask), '-=.2');
+
+	tl.add(masking(list_t2));
 
 	tl.to('.t2', .3, { opacity: 0 }, "+=1.5");
-
-	tl.to('.t3a', MASK_TIME, _extends({}, mask), "+=.2");
-	tl.to('.t3b', MASK_TIME, _extends({}, mask), '-=.2');
 
 	// tl.add('t3Shift', "+=1")
 	// tl.to(['.t3a', '.t3b'], .3, {x:-4, y:-15}, 't3Shift')
@@ -41,25 +51,7 @@ var start = function start() {
 	// tl.gotoAndPlay("green")
 };
 
-function masking(list) {
-	var tl = new TimelineMax();
-	list.map(function (item) {
-		var id = item.id;
-		var y = item.y;
-
-		tl.from(id, .5, { clip: 'rect(' + (y + 100) + 'px, 320px, 1200px, 0px)', opacity: 1, ease: Power2.easeOut });
-	});
-}
-
-var list_t2 = [{ id: '.t2a', y: 120 }, { id: '.t2b', y: 210 }, { id: '.t2c', y: 280 }, { id: '.t2d', y: 350 }];
-
-list_t2.map(function (item) {
-	TweenLite.set(item.id, { clip: 'rect(' + item.y + 'px, 320px, 1200px, 0px)' });
-});
-
-masking(list_t2);
-
-// start()
+start();
 
 module.exports = {};
 
