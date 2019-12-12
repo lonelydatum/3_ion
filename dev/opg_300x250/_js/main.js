@@ -1,8 +1,16 @@
+const masky = (list)=>{
+	const tl = new TimelineMax()
+	list.map(item=>{
+		tl.from(`${item} img`, .4, {y:"+=50", opacity:0, ease:Power2.easeOut}, "-=.25" )
+	})
+	return tl
+}
+
 const start = ()=>{
 
 	
-	const MASK_TIME = .6
-	const mask = {clip: `rect(100px, 600px, 500px, 0px)`, opacity:1, ease:Power1.easeOut}
+	// const MASK_TIME = .6
+	
 
 	TweenLite.to(".hero", 15, {scale:.5, x:0, y:0})
 
@@ -10,32 +18,39 @@ const start = ()=>{
 
 	const tl = new TimelineMax()
 	tl.set('.frame1', {opacity:1})
-	tl.set('.masker', {opacity:0})
+
+	tl.from('.ion_1', .3, {opacity:0}, "+=.2")
+	tl.from('.ion_2', .3, {opacity:0}, "+=.2")
+	tl.from('.ion_3', .3, {opacity:0}, "+=.2")
 	
-	tl.to('.t1', .3, {opacity:0}, "+=1.7")
-	tl.to('.t2a', MASK_TIME, {...mask}, "+=.2" )
-	tl.to('.t2b', MASK_TIME, {...mask}, '-=.2')
+	tl.to('.ion', .3, {opacity:0}, "+=1.7")
+	
+
+	tl.add(masky(['.t2a', '.t2b']))
 
 	tl.to('.t2', .3, {opacity:0}, "+=1.5")
 
-	tl.to('.t3a', MASK_TIME, {...mask}, "+=.2" )
-	tl.to('.t3b', MASK_TIME, {...mask}, '-=.2')
+
+	tl.add(masky(['.t3a', '.t3b']))
 
 
-	// tl.add('t3Shift', "+=1")
-	// tl.to(['.t3a', '.t3b'], .3, {x:-4, y:-15}, 't3Shift')
-
+	
 	
 	tl.add('green', "+=1")
 	
-	// tl.from('.greenbar', .3, {opacity:0}, 'green')
-	// tl.to(, .3, {x:50}, 'green')
+	
 	tl.from(['.t3c', '.greenbar'], .3, {opacity:0}, 'green')
 
 	tl.to(".t3", .3, {opacity:0}, "+=2.5")
 
 	tl.add('end', "+=.1")
-	tl.to(".t1", .3, {opacity:1}, "end")
+	
+	tl.to('.ion_0', .3, {opacity:1}, "end")
+	tl.to('.ion_1', .3, {opacity:1}, "+=.2")
+	tl.to('.ion_2', .3, {opacity:1}, "+=.2")
+	tl.to('.ion_3', .3, {opacity:1}, "+=.2")
+
+
 	tl.to(".cover.static", 1, {opacity:.7}, "end-=1")
 
 	// tl.gotoAndPlay("green")

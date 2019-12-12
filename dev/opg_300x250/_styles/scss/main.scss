@@ -5,15 +5,63 @@
 
 
 .frame1 {
-	// opacity: 1;
+	opacity: 1;
+}
+
+.t1{
+	// opacity: 0;
+}
+
+.t2{
+	// opacity: 0;
+}
+
+.t3{
+	opacity: 1;
 }
 
 
 .masker{
 	// clip: rect(200px, 600px, 500px, 0px);
-	clip: rect(350px, 600px, 500px, 0px);
+	// clip: rect(350px, 600px, 500px, 0px);
 	// clip: rect(100px, 600px, 500px, 0px);
+	width: 300px;
+	height: 30px;
+	// border: 1px solid red;
+	position: absolute;
+	overflow: hidden;
 }
+
+.masker.t2a{
+	@include pos(0, 98);
+	img{
+		@include pos-scale(0, -98, .5);
+	}
+}
+
+.masker.t2b{
+	@include pos(0, 128);
+	img{
+		@include pos-scale(0, -128, .5);
+	}
+}
+
+
+.masker.t3a{
+	@include pos(-4, 84);
+	img{
+		@include pos-scale(0, -101, .5);
+	}
+}
+
+.masker.t3b{
+	@include pos(-4, 113);
+	img{
+		@include pos-scale(0, -128, .5);
+	}
+}
+
+
 
 
 #banner{
