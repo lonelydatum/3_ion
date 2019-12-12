@@ -10,7 +10,9 @@
 
 
 .masker{
-	clip: rect(0px, 600px, 500px, 0px);
+	// clip: rect(200px, 600px, 500px, 0px);
+	clip: rect(350px, 600px, 500px, 0px);
+	// clip: rect(100px, 600px, 500px, 0px);
 }
 
 
@@ -32,7 +34,7 @@
 	width: 3px;
 	height: 19px;
 	background-color: #66cc00;
-	@include pos(265, 151);
+	@include pos(50, 151);
 
 }
 
@@ -53,4 +55,13 @@
 	height: 100%;
 	background-color: #76507e;
 	opacity: .25;
+}
+
+.cover.rollover{
+	transition:.3s ease-out;
+	opacity: 0;
+}
+
+#banner:hover .cover.rollover{
+	opacity: .4;
 }
