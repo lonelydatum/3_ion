@@ -5,7 +5,13 @@
 
 var list_t2 = [{ id: '.t2a', y: 120 }, { id: '.t2b', y: 210 }, { id: '.t2c', y: 280 }, { id: '.t2d', y: 350 }];
 
+var list_t3 = [{ id: '.t3a', y: 40 }, { id: '.t3b', y: 110 }, { id: '.t3c', y: 180 }, { id: '.t3d', y: 240 }, { id: '.t3e', y: 310 }, { id: '.t3f', y: 310 }];
+
 list_t2.map(function (item) {
+	TweenLite.set(item.id, { clip: 'rect(' + item.y + 'px, 320px, 1200px, 0px)' });
+});
+
+list_t3.map(function (item) {
 	TweenLite.set(item.id, { clip: 'rect(' + item.y + 'px, 320px, 1200px, 0px)' });
 });
 
@@ -27,20 +33,20 @@ var start = function start() {
 	tl.set('.frame1', { opacity: 1 });
 	tl.set('.masker', { opacity: 0 });
 
-	tl.to('.t1', .3, { opacity: 0 }, "+=1.7");
+	tl.to('.t1', .3, { opacity: 0 }, "+=1");
 
 	tl.add(masking(list_t2));
 
 	tl.to('.t2', .3, { opacity: 0 }, "+=1.5");
 
+	tl.add(masking(list_t3));
+
 	// tl.add('t3Shift', "+=1")
 	// tl.to(['.t3a', '.t3b'], .3, {x:-4, y:-15}, 't3Shift')
 
-	tl.add('green', "+=1");
-
 	// tl.from('.greenbar', .3, {opacity:0}, 'green')
 	// tl.to(, .3, {x:50}, 'green')
-	tl.from(['.t3c', '.greenbar'], .3, { opacity: 0 }, 'green');
+	tl.from(".engine", .3, { opacity: 0 }, '+=.3');
 
 	tl.to(".t3", .3, { opacity: 0 }, "+=2.5");
 
