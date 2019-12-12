@@ -41,14 +41,9 @@ var start = function start() {
 
 	tl.add(masking(list_t3));
 
-	// tl.add('t3Shift', "+=1")
-	// tl.to(['.t3a', '.t3b'], .3, {x:-4, y:-15}, 't3Shift')
-
-	// tl.from('.greenbar', .3, {opacity:0}, 'green')
-	// tl.to(, .3, {x:50}, 'green')
 	tl.from(".engine", .3, { opacity: 0 }, '+=.3');
 
-	tl.to(".t3", .3, { opacity: 0 }, "+=2.5");
+	tl.to(".t3", .3, { opacity: 0 }, "+=3");
 
 	tl.add('end', "+=.1");
 	tl.to(".t1", .3, { opacity: 1 }, "end");
