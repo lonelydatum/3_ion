@@ -375,6 +375,10 @@ sup {
   position: absolute;
 }
 
+.hover {
+  opacity: 0;
+}
+
 .cover {
   -webkit-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
@@ -395,8 +399,12 @@ sup {
   opacity: 0;
 }
 
-#banner:hover .cover.rollover {
-  opacity: .4;
+#banner:hover .border {
+  border: 2px solid #00cc66;
+}
+
+#banner:hover .hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

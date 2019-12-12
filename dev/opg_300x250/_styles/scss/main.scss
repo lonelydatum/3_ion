@@ -96,6 +96,9 @@
 	// @include pos-scale(0, 0, .5);
 	// opacity: .5;
 }
+.hover{
+	opacity: 0;
+}
 
 .cover{
 	@include pos(0, 0);
@@ -110,6 +113,12 @@
 	opacity: 0;
 }
 
-#banner:hover .cover.rollover{
-	opacity: .4;
+#banner:hover .border{
+	border: 2px solid #00cc66;
+	
+}
+
+#banner:hover .hover{
+	opacity:1;
+	
 }
