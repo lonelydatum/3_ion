@@ -31,7 +31,14 @@ const start = ()=>{
 
 
 	tl.add('end', "+=.1")
-	tl.to('.ion', .3, {opacity:1}, "end")
+	tl.add('end', "+=.1")
+	
+	tl.to('.ion_0', .3, {opacity:1}, "end")
+	tl.to('.ion_1', .3, {opacity:1}, "+=.2")
+	tl.to('.ion_2', .3, {opacity:1}, "+=.2")
+	tl.to('.ion_3', .3, {opacity:1}, "+=.2")
+	
+	// tl.to('.ion', .3, {opacity:1}, "end")
 	// tl.to(".cover.static", 1, {opacity:.7}, "end-=1")
 	
 	
