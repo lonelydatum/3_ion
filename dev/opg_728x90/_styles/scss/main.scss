@@ -5,7 +5,7 @@
 
 
 .frame1 {
-	// opacity: 1;
+	opacity: 1;
 }
 
 .t1{
@@ -13,24 +13,32 @@
 }
 
 .t2{
-	// opacity: 0;
-}
-
-.t2.t2d{
-	// clip: rect(120px, 320px, 1200px, 0px);
-	// clip: rect(350px, 320px, 1200px, 0px);
-}
-
-.t3.t3d{
-	// opacity: 0;
-	// clip: rect(240px, 320px, 1200px, 0px);
+	// opacity: 1;
 }
 
 
 .masker{
 	
-	// clip: rect(350px, 600px, 500px, 0px);
+	width: 728px;
+	height: 34px;	
+	position: absolute;
+	overflow: hidden;
+	// border: 1px solid red;
 	
+}
+
+.masker.t1{
+	@include pos(0, 32);
+	img{
+		@include pos-scale(0, -33, .5);
+	}
+}
+
+.masker.t2a{
+	@include pos(0, 19);
+	img{
+		@include pos-scale(0, -20, .5);
+	}
 }
 
 
@@ -43,7 +51,15 @@
 
 
 
-
+.cta{
+	width: 101px;
+	height: 27px;
+	@include pos(597, 10);
+	background-color: #66cc00;
+	transition:.3s ease-out;
+	opacity: 0;
+	// border: 2px solid white;
+}
 
 
 
@@ -63,11 +79,15 @@
 	opacity: .25;
 }
 
-.cover.rollover{
-	transition:.3s ease-out;
-	opacity: 0;
+#banner:hover .cta{
+	opacity:1;	
 }
 
-#banner:hover .cover.rollover{
-	opacity: .4;
-}
+// .cover.rollover{
+// 	transition:.3s ease-out;
+// 	opacity: 0;
+// }
+
+// #banner:hover .cover.rollover{
+// 	opacity: .4;
+// }

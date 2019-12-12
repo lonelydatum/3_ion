@@ -215,25 +215,242 @@ sup {
   opacity: 0;
 }
 
-#banner {
-  font-size: 20px;
-  color: #333;
-  width: 160px;
-  height: 600px;
+.frame1 {
+  opacity: 1;
 }
 
-.border {
-  width: 101px;
-  height: 27px;
-  -webkit-transform: translate(24px, 202px);
-  -ms-transform: translate(24px, 202px);
-  transform: translate(24px, 202px);
+.masker {
+  width: 160px;
+  height: 30px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.masker.t2a {
+  -webkit-transform: translate(0px, 74px);
+  -ms-transform: translate(0px, 74px);
+  transform: translate(0px, 74px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
   perspective: 1000px;
   position: absolute;
-  border: 2px solid white;
+}
+
+.masker.t2a img {
+  -webkit-transform: translate(0px, -75px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -75px) scale(0.5, 0.5);
+  transform: translate(0px, -75px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t2b {
+  -webkit-transform: translate(0px, 110px);
+  -ms-transform: translate(0px, 110px);
+  transform: translate(0px, 110px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t2b img {
+  -webkit-transform: translate(0px, -111px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -111px) scale(0.5, 0.5);
+  transform: translate(0px, -111px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t2c {
+  -webkit-transform: translate(0px, 147px);
+  -ms-transform: translate(0px, 147px);
+  transform: translate(0px, 147px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t2c img {
+  -webkit-transform: translate(0px, -148px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -148px) scale(0.5, 0.5);
+  transform: translate(0px, -148px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t2d {
+  -webkit-transform: translate(0px, 177px);
+  -ms-transform: translate(0px, 177px);
+  transform: translate(0px, 177px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t2d img {
+  -webkit-transform: translate(0px, -178px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -178px) scale(0.5, 0.5);
+  transform: translate(0px, -178px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3a {
+  -webkit-transform: translate(0px, 25px);
+  -ms-transform: translate(0px, 25px);
+  transform: translate(0px, 25px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3a img {
+  -webkit-transform: translate(0px, -25px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -25px) scale(0.5, 0.5);
+  transform: translate(0px, -25px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3b {
+  -webkit-transform: translate(0px, 60px);
+  -ms-transform: translate(0px, 60px);
+  transform: translate(0px, 60px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3b img {
+  -webkit-transform: translate(0px, -61px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -61px) scale(0.5, 0.5);
+  transform: translate(0px, -61px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3c {
+  -webkit-transform: translate(0px, 88px);
+  -ms-transform: translate(0px, 88px);
+  transform: translate(0px, 88px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3c img {
+  -webkit-transform: translate(0px, -89px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -89px) scale(0.5, 0.5);
+  transform: translate(0px, -89px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3d {
+  -webkit-transform: translate(0px, 123px);
+  -ms-transform: translate(0px, 123px);
+  transform: translate(0px, 123px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3d img {
+  -webkit-transform: translate(0px, -124px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -124px) scale(0.5, 0.5);
+  transform: translate(0px, -124px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3e {
+  -webkit-transform: translate(0px, 159px);
+  -ms-transform: translate(0px, 159px);
+  transform: translate(0px, 159px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3e img {
+  -webkit-transform: translate(0px, -160px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -160px) scale(0.5, 0.5);
+  transform: translate(0px, -160px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3f {
+  -webkit-transform: translate(0px, 189px);
+  -ms-transform: translate(0px, 189px);
+  transform: translate(0px, 189px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+.masker.t3f img {
+  -webkit-transform: translate(0px, -189px) scale(0.5, 0.5);
+  -ms-transform: translate(0px, -189px) scale(0.5, 0.5);
+  transform: translate(0px, -189px) scale(0.5, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
+#banner {
+  font-size: 20px;
+  color: #333;
+  width: 160px;
+  height: 600px;
 }
 
 .greenbar {
@@ -248,6 +465,22 @@ sup {
   -webkit-perspective: 1000px;
   perspective: 1000px;
   position: absolute;
+}
+
+.cta {
+  width: 101px;
+  height: 25px;
+  -webkit-transform: translate(28px, 513px);
+  -ms-transform: translate(28px, 513px);
+  transform: translate(28px, 513px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  background-color: #66cc00;
+  transition: .3s ease-out;
+  opacity: 0;
 }
 
 .hero {
@@ -276,13 +509,8 @@ sup {
   opacity: .25;
 }
 
-.cover.rollover {
-  transition: .3s ease-out;
-  opacity: 0;
-}
-
-#banner:hover .cover.rollover {
-  opacity: .4;
+#banner:hover .cta {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */

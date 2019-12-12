@@ -21,54 +21,63 @@ function masking(list) {
 	return tl;
 }
 
+var masky = function masky(list) {
+	var tl = new TimelineMax();
+	list.map(function (item) {
+		console.log(item);
+		tl.from(item + ' img', .33, { y: "+=50", opacity: 0, ease: Power2.easeOut }, "-=.2");
+	});
+	return tl;
+};
+
+var main = function main(_ref) {
+	var list1 = _ref.list1;
+	var list2 = _ref.list2;
+
+	var tl = new TimelineMax();
+	tl.set('.frame1', { opacity: 1 });
+
+	tl.from('.ion_1', .3, { opacity: 0 }, "+=.2");
+	tl.from('.ion_2', .3, { opacity: 0 }, "+=.2");
+	tl.from('.ion_3', .3, { opacity: 0 }, "+=.2");
+	tl.to('.ion', .3, { opacity: 0 }, "+=1.7");
+
+	tl.add(masky(list1));
+	tl.to('.t2', .3, { opacity: 0 }, "+=1.5");
+
+	tl.add(masky(list2));
+	tl.from('.engine', .3, { opacity: 0 }, "+=.5");
+
+	tl.add('green', "+=1");
+
+	tl.to(".t3", .3, { opacity: 0 }, "+=2.5");
+
+	tl.add('end', "+=.1");
+
+	tl.to('.ion_0', .3, { opacity: 1 }, "end");
+	tl.to('.ion_1', .3, { opacity: 1 }, "+=.2");
+	tl.to('.ion_2', .3, { opacity: 1 }, "+=.2");
+	tl.to('.ion_3', .3, { opacity: 1 }, "+=.2");
+
+	tl.to(".cover.static", 1, { opacity: .7 }, "end-=1");
+};
+
 exports.size = size;
-exports.masking = masking;
+exports.masky = masky;
+exports.main = main;
 
 },{}],2:[function(require,module,exports){
 'use strict';
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
-TweenLite.from(".hero", 15, { x: -150, y: 0 });
+TweenLite.from(".hero", 15, { x: -100, y: 0, ease: Power2.easeOut });
 
-var list_t2 = [{ id: '.t2a', y: 120 }, { id: '.t2b', y: 210 }, { id: '.t2c', y: 280 }, { id: '.t2d', y: 350 }];
+var list1 = ['.t2a', '.t2b', '.t2c', '.t2d'];
 
-var list_t3 = [{ id: '.t3a', y: 40 }, { id: '.t3b', y: 110 }, { id: '.t3c', y: 180 }, { id: '.t3d', y: 240 }, { id: '.t3e', y: 310 }, { id: '.t3f', y: 310 }];
+var list2 = ['.t3a', '.t3b', '.t3c', '.t3d', '.t3e', '.t3f'];
 
-list_t2.map(function (item) {
-	TweenLite.set(item.id, { clip: 'rect(' + item.y + 'px, 320px, 1200px, 0px)' });
-});
-
-list_t3.map(function (item) {
-	TweenLite.set(item.id, { clip: 'rect(' + item.y + 'px, 320px, 1200px, 0px)' });
-});
-
-var start = function start() {
-
-	var tl = new TimelineMax();
-	tl.set('.frame1', { opacity: 1 });
-	tl.set('.masker', { opacity: 0 });
-
-	tl.to('.t1', .3, { opacity: 0 }, "+=1");
-
-	tl.add((0, _commonJsCommonJs.masking)(list_t2));
-
-	tl.to('.t2', .3, { opacity: 0 }, "+=1.5");
-
-	tl.add((0, _commonJsCommonJs.masking)(list_t3));
-
-	tl.from(".engine", .3, { opacity: 0 }, '+=.3');
-
-	tl.to(".t3", .3, { opacity: 0 }, "+=3");
-
-	tl.add('end', "+=.1");
-	tl.to(".t1", .3, { opacity: 1 }, "end");
-	tl.to(".cover.static", 1, { opacity: .7 }, "end-=1");
-
-	// tl.gotoAndPlay("green")
-};
-
-start();
+(0, _commonJsCommonJs.main)({ list1: list1, list2: list2 });
 
 module.exports = {};
 

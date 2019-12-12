@@ -5,7 +5,7 @@
 
 
 .frame1 {
-	// opacity: 1;
+	opacity: 1;
 }
 
 .t1{
@@ -16,21 +16,86 @@
 	// opacity: 0;
 }
 
-.t2.t2d{
-	// clip: rect(120px, 320px, 1200px, 0px);
-	// clip: rect(350px, 320px, 1200px, 0px);
-}
-
-.t3.t3d{
-	// opacity: 0;
-	// clip: rect(240px, 320px, 1200px, 0px);
+.t3{
+	
 }
 
 
-.masker{
+.masker{	
+	width: 160px;
+	height: 30px;	
+	position: absolute;
+	overflow: hidden;
+	// border: 1px solid red;
 	
-	// clip: rect(350px, 600px, 500px, 0px);
-	
+}
+
+
+.masker.t2a{
+	@include pos(0, 74);
+	img{
+		@include pos-scale(0, -75, .5);
+	}
+}
+
+.masker.t2b{
+	@include pos(0, 110);
+	img{
+		@include pos-scale(0, -111, .5);
+	}
+}
+
+.masker.t2c{
+	@include pos(0, 147);
+	img{
+		@include pos-scale(0, -148, .5);
+	}
+}
+
+.masker.t2d{
+	@include pos(0, 177);
+	img{
+		@include pos-scale(0, -178, .5);
+	}
+}
+
+
+
+.masker.t3a{
+	@include pos(0, 25);
+	img{
+		@include pos-scale(0, -25, .5);
+	}
+}
+.masker.t3b{
+	@include pos(0, 60);
+	img{
+		@include pos-scale(0, -61, .5);
+	}
+}
+.masker.t3c{
+	@include pos(0, 88);
+	img{
+		@include pos-scale(0, -89, .5);
+	}
+}
+.masker.t3d{
+	@include pos(0, 123);
+	img{
+		@include pos-scale(0, -124, .5);
+	}
+}
+.masker.t3e{
+	@include pos(0, 159);
+	img{
+		@include pos-scale(0, -160, .5);
+	}
+}
+.masker.t3f{
+	@include pos(0, 189);
+	img{
+		@include pos-scale(0, -189, .5);
+	}
 }
 
 
@@ -41,12 +106,6 @@
 	height: 600px;
 }
 
-.border{
-	width: 101px;
-	height: 27px;
-	@include pos(24, 202);
-	border: 2px solid white;
-}
 
 .greenbar{
 	width: 3px;
@@ -55,13 +114,20 @@
 	@include pos(50, 151);
 
 }
-
-.t3a, .t3b{
-	// @include pos-scale(-4, -15, .5);
+.cta{
+	width: 101px;
+	height: 25px;
+	@include pos(28, 513);
+	// border: 2px solid white;
+	background-color: #66cc00;
+	transition:.3s ease-out;
+	opacity: 0;
 }
+
 
 .hero{
 	@include pos-scale(-271, 0, 1);
+	// @include pos-scale(-31, 0, 1);
 	// @include pos-scale(0, 0, 1);
 
 	// @include pos-scale(0, 0, .5);
@@ -76,11 +142,8 @@
 	opacity: .25;
 }
 
-.cover.rollover{
-	transition:.3s ease-out;
-	opacity: 0;
-}
 
-#banner:hover .cover.rollover{
-	opacity: .4;
+
+#banner:hover .cta{
+	opacity: 1;
 }
