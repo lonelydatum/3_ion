@@ -1,0 +1,84 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+.frame1 {
+	opacity: 1;
+}
+
+.t1{
+	opacity: 0;
+}
+
+.t2{
+	// opacity: 0;
+}
+
+.t2.t2d{
+	// clip: rect(120px, 320px, 1200px, 0px);
+	// clip: rect(350px, 320px, 1200px, 0px);
+}
+
+.t3{
+	opacity: 0;
+}
+
+
+.masker{
+	
+	// clip: rect(350px, 600px, 500px, 0px);
+	
+}
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 160px;
+	height: 600px;
+}
+
+.border{
+	width: 101px;
+	height: 27px;
+	@include pos(24, 202);
+	border: 2px solid white;
+}
+
+.greenbar{
+	width: 3px;
+	height: 19px;
+	background-color: #66cc00;
+	@include pos(50, 151);
+
+}
+
+.t3a, .t3b{
+	@include pos-scale(-4, -15, .5);
+}
+
+.hero{
+	@include pos-scale(-171, -153, 1.1);
+
+	// @include pos-scale(0, 0, .5);
+	// opacity: .5;
+}
+
+.cover{
+	@include pos(0, 0);
+	width: 100%;
+	height: 100%;
+	background-color: #76507e;
+	opacity: .25;
+}
+
+.cover.rollover{
+	transition:.3s ease-out;
+	opacity: 0;
+}
+
+#banner:hover .cover.rollover{
+	opacity: .4;
+}
