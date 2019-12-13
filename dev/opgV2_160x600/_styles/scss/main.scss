@@ -1,0 +1,149 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+.frame1 {
+	opacity: 1;
+}
+
+.t1{
+	// opacity: 0;
+}
+
+.t2{
+	// opacity: 0;
+}
+
+.t3{
+	
+}
+
+
+.masker{	
+	width: 160px;
+	height: 30px;	
+	position: absolute;
+	overflow: hidden;
+	// border: 1px solid red;
+	
+}
+
+
+.masker.t2a{
+	@include pos(0, 74);
+	img{
+		@include pos-scale(0, -75, .5);
+	}
+}
+
+.masker.t2b{
+	@include pos(0, 110);
+	img{
+		@include pos-scale(0, -111, .5);
+	}
+}
+
+.masker.t2c{
+	@include pos(0, 147);
+	img{
+		@include pos-scale(0, -148, .5);
+	}
+}
+
+.masker.t2d{
+	@include pos(0, 177);
+	img{
+		@include pos-scale(0, -178, .5);
+	}
+}
+
+
+
+.masker.t3a{
+	@include pos(0, 25);
+	img{
+		@include pos-scale(0, -25, .5);
+	}
+}
+.masker.t3b{
+	@include pos(0, 60);
+	img{
+		@include pos-scale(0, -61, .5);
+	}
+}
+.masker.t3c{
+	@include pos(0, 88);
+	img{
+		@include pos-scale(0, -89, .5);
+	}
+}
+.masker.t3d{
+	@include pos(0, 123);
+	img{
+		@include pos-scale(0, -124, .5);
+	}
+}
+.masker.t3e{
+	@include pos(0, 159);
+	img{
+		@include pos-scale(0, -160, .5);
+	}
+}
+.masker.t3f{
+	@include pos(0, 189);
+	img{
+		@include pos-scale(0, -189, .5);
+	}
+}
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 160px;
+	height: 600px;
+}
+
+
+.greenbar{
+	width: 3px;
+	height: 19px;
+	background-color: #66cc00;
+	@include pos(50, 151);
+
+}
+.cta{
+	width: 101px;
+	height: 25px;
+	@include pos(28, 513);
+	// border: 2px solid white;
+	background-color: #66cc00;
+	transition:.3s ease-out;
+	opacity: 0;
+}
+
+
+.hero{
+	@include pos-scale(-271, 0, 1);
+	// @include pos-scale(-31, 0, 1);
+	// @include pos-scale(0, 0, 1);
+
+	// @include pos-scale(0, 0, .5);
+	// opacity: .5;
+}
+
+.cover{
+	@include pos(0, 0);
+	width: 100%;
+	height: 100%;
+	background-color: #76507e;
+	opacity: .25;
+}
+
+
+
+#banner:hover .cta{
+	opacity: 1;
+}

@@ -1,0 +1,93 @@
+
+
+@import '../../../_common/styles/common.scss';
+
+
+
+.frame1 {
+	opacity: 1;
+}
+
+.t1{
+	// opacity: 0;
+}
+
+.t2{
+	// opacity: 1;
+}
+
+
+.masker{
+	
+	width: 728px;
+	height: 34px;	
+	position: absolute;
+	overflow: hidden;
+	// border: 1px solid red;
+	
+}
+
+.masker.t1{
+	@include pos(0, 32);
+	img{
+		@include pos-scale(0, -33, .5);
+	}
+}
+
+.masker.t2a{
+	@include pos(0, 19);
+	img{
+		@include pos-scale(0, -20, .5);
+	}
+}
+
+
+#banner{
+	font-size: 20px;
+	color: #333;
+	width: 728px;
+	height: 90px;
+}
+
+
+
+.cta{
+	width: 101px;
+	height: 27px;
+	@include pos(597, 10);
+	background-color: #66cc00;
+	transition:.3s ease-out;
+	opacity: 0;
+	// border: 2px solid white;
+}
+
+
+
+.hero{
+	// @include pos-scale(-271, 0, 1);
+	// @include pos-scale(0, 0, 1);
+
+	// @include pos-scale(0, -216, 1);
+	// opacity: .5;
+}
+
+.cover{
+	@include pos(0, 0);
+	width: 100%;
+	height: 100%;
+	background-color: #76507e;
+	opacity: .25;
+}
+
+#banner:hover .cta{
+	opacity:1;	
+}
+
+// .cover.rollover{
+// 	transition:.3s ease-out;
+// 	opacity: 0;
+// }
+
+// #banner:hover .cover.rollover{
+// 	opacity: .4;
+// }
