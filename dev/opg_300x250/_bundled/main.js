@@ -71,6 +71,7 @@ exports.main = main;
 
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
+TweenLite.to(".hero", 15, { scale: .5, x: 0, y: 0, ease: Power2.easeOut });
 var list1 = ['.t2a', '.t2b'];
 var list2 = ['.t3a', '.t3b'];
 
